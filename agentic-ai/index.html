@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agentic AI in 50 Days · Rohit Kumar</title>
+<meta name="description" content="A 50-day, one-hour-a-day, weekday-only plan for experienced Python and Spark engineers to learn agentic AI, with daily builds and progress tracking.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
+<meta property="og:title" content="Agentic AI in 50 Days">
+<meta property="og:description" content="A weekday-only, one-hour-a-day plan to learn agentic AI for experienced Python and Spark engineers.">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<nav class="topbar" aria-label="Site">
+  <div class="in">
+    <a class="brand" href="../">Rohit Kumar</a>
+    <a class="back" href="../">← Back to homepage</a>
+  </div>
+</nav>
+<div class="wrap">
+  <header>
+    <div class="eyebrow">1 hour a day · Monday to Friday · 10 weeks · Python</div>
+    <h1>Agentic AI in <span class="gradient">50 Days</span></h1>
+    <p class="lede">The plan I'm following to learn agentic AI, coming from 15+ years of Python, Spark and SQL. It skips the basics an experienced engineer already knows and covers the whole field: how models work, tools, retrieval, context, frameworks, multi-agent systems, evals, safety and deployment. Each day takes about an hour. Fridays are lighter, for finishing the week's build or catching up, and weekends are off. Days marked <span class="tag edge">data edge</span> lean on big data experience. Tick days off as you go; progress is saved in your browser.</p>
+  </header>
+
+  <div class="summary" aria-live="polite">
+    <div class="stat"><b id="statDone">0 / 50</b><span>days done</span></div>
+    <div class="stat"><b id="statPct">0%</b><span>of the plan</span></div>
+    <div class="stat"><b id="statWeek">Week 1</b><span id="statWeekName">current week</span></div>
+    <div class="stat"><b id="statStreak">0</b><span>weekday streak</span></div>
+  </div>
+  <div class="bar" role="progressbar" aria-label="Plan progress" aria-valuemin="0" aria-valuemax="50" id="mainBar"><i></i></div>
+
+  <div class="next" id="nextCard"></div>
+
+  <nav class="rail" id="rail" aria-label="Weeks"></nav>
+
+  <section class="shelf">
+    <h2>What you'll understand, in order</h2>
+    <ul class="arc">
+      <li><span class="wks">Weeks 1–2</span><b>The core loop</b><span class="q">What an LLM is, and how a model plus tools plus a loop becomes an agent.</span></li>
+      <li><span class="wks">Weeks 3–4</span><b>Knowledge and context</b><span class="q">Retrieval, memory, context engineering, and plugging in tools with MCP.</span></li>
+      <li><span class="wks">Weeks 5–6</span><b>Frameworks and harnesses</b><span class="q">LangGraph, multi-agent systems, and how harnesses like Claude Code are built.</span></li>
+      <li><span class="wks">Weeks 7–8</span><b>Production</b><span class="q">Evals, safety, cost, durable execution and deployment.</span></li>
+      <li><span class="wks">Weeks 9–10</span><b>Capstone</b><span class="q">A Data Analyst Agent on your own data stack, built end to end.</span></li>
+    </ul>
+  </section>
+
+  <div class="toolbar">
+    <div class="seg" role="group" aria-label="Show">
+      <button type="button" id="fAll" aria-pressed="true">All days</button>
+      <button type="button" id="fLeft" aria-pressed="false">Remaining</button>
+    </div>
+    <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+      <span class="save-state" id="saveState">Loading progress…</span>
+      <button type="button" class="btn" id="exportBtn">Export</button>
+      <button type="button" class="btn" id="importBtn">Import</button>
+      <input type="file" id="importFile" accept="application/json,.json" hidden>
+      <span id="resetWrap"></span>
+    </div>
+  </div>
+
+  <div id="weeks"></div>
+
+  <section class="shelf">
+    <h2>Rules that make this work</h2>
+    <ol class="rules">
+      <li>Build the same day you read. If time runs out, cut the reading, not the code.</li>
+      <li>Keep one Git repo for the whole plan, with a folder per week. By the end it is your portfolio.</li>
+      <li>Use Claude Code or Cursor on your real work every day. Watching a good harness work teaches you the design.</li>
+      <li>Missed a day? Use Friday to catch up. Don't skip a build day to stay on schedule.</li>
+      <li>Ignore new frameworks until Week 5. The fundamentals (tool loop, context, retrieval, evals, state) don't change.</li>
+    </ol>
+  </section>
+
+  <section class="shelf">
+    <h2>Reference shelf</h2>
+    <div class="shelf-grid" id="shelf"></div>
+  </section>
+
+  <footer>Links checked October 2026. Docs sites move often; if a link breaks, search the page title or open an issue. Progress is stored only in your browser; use Export and Import to move it between devices.</footer>
+</div>
+<script src="js/plan.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
